@@ -18,7 +18,11 @@ jobs:
     - name: Set up JDK 17
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        ava-version: '17'
+        java-package: jdk
+        architecture: x64
+        distribution: 'temurin'  # Specify JDK distribution here
+        check-latest: false
 
     # Cache Maven dependencies to speed up builds
     - name: Cache Maven dependencies
